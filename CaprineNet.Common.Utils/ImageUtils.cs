@@ -27,6 +27,30 @@ namespace CaprineNet.Common.Utils
     public static class ImageUtils
     {
         /// <summary>
+        /// Gets the width of an image from its <paramref name="path"/>
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns>An integer representing the image's width</returns>
+        public static int GetWidth(string path)
+        {
+            var values = GetResolution(path);
+
+            return values.Item1;
+        }
+
+        /// <summary>
+        /// Gets the width of an image from its <paramref name="path"/>
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns>An integer representing the image's height</returns>
+        public static int GetHeight(string path)
+        {
+            var values = GetResolution(path);
+
+            return values.Item2;
+        }
+
+        /// <summary>
         /// Gets the width and height of an image from its <paramref name="path"/>
         /// </summary>
         /// <param name="path"></param>
